@@ -73,7 +73,7 @@ void init_timer1() {
 }
 
 void send_pulse() {
-	// Gera um pulso de 10 microssegundos no pino de trigger do sensor ultrassônico;
+	// Gera um pulso de 10 microssegundos no pino configurado como trigger;
 	PORTD |= (1 << TRIG_PIN);
 	_delay_us(10);
 	PORTD &= ~(1 << TRIG_PIN);
